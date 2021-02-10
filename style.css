@@ -42,7 +42,7 @@ body {
       display: flex;
       flex-direction: row-reverse;
       margin:0;
-      background: url("./image/img2.jpg") no-repeat black;
+      background: url("img2.jpg") no-repeat black;
       background-position: -1000% 55%;
       background-size: 98%;
   }
