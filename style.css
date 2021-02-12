@@ -1,9 +1,13 @@
+* {
+    
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     padding: 0;
     background: #101010;
     font-family: 'Arvo', serif;
-    box-sizing: border-box;
+    
     
   }
 
@@ -38,23 +42,24 @@ body {
   }
 
   main { 
-      
       display: flex;
       flex-direction: row-reverse;
       margin:0;
-      background: url("img2.jpg") no-repeat black;
+      background: url("./image/img2.jpg") no-repeat black;
       background-position: -1000% 55%;
       background-size: 98%;
   }
   
  #principal { 
+    position: relative;
+    right: 3rem;
     overflow: auto;
     font-family: 'Arvo', serif;;
     font-weight:100; 
-    background: rgba(30,30,30,0.8);
+    background: rgba(30,30,30,0.9);
     color: white;
-    padding: 3rem 4rem 4rem 4rem;
-    width: 33%;;
+    padding: 4rem 2rem 4rem 4rem;
+    width: 35%;;
     margin-top:3rem;
     margin-right: 2rem;
     font-size: 1.2rem;
@@ -73,8 +78,12 @@ body {
     }
 
   h1 {
-    margin-top: 0;
+    margin: 0;
     font-size: 3rem;
+  }
+
+  p {
+    text-indent: 2rem;
   }
 
   .espaco {
@@ -109,25 +118,33 @@ body {
 
 
   .caixa1 {
-    overflow: auto;
+    overflow: hidden;
     grid-area: "caixa1";
     text-align: justify;
-    padding: 0 1rem;
+    padding: 0 1rem 2rem 1rem;
     border: 2px solid white;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     height: 62.5rem;
     grid-area: caixa1;
-     
   }
-  .caixa1::-webkit-scrollbar {
+
+  .caixa1:hover {
+    overflow-y: auto;
+  }
+
+  .caixa1 h2 {
+    color: red;
+    text-align: center;
+  }
+  .caixa1:hover::-webkit-scrollbar {
     width:0.2em;
     }
      
-  .caixa1::-webkit-scrollbar-track {
+  .caixa1:hover::-webkit-scrollbar-track {
     background:#333;
     }
      
-  .caixa1::-webkit-scrollbar-thumb {
+  .caixa1:hover::-webkit-scrollbar-thumb {
     background: #fff;
     }
 
@@ -137,10 +154,15 @@ body {
     font-size: 1rem;
     padding: 1rem; 
     color: red;
-    overflow: scroll;
+    overflow: hidden;
     overflow-x: hidden;
-    padding: 0 0.5rem 0.5rem 0.5rem;
+    padding: 0.6rem 1rem 0.5rem 1rem;
     height: 20rem;
+    border-bottom: 0.5px dotted rgba(150,150,150, 0.5);
+  }
+
+  .caixa:hover {
+    overflow:auto;
   }
 
   .caixa2 {
@@ -199,17 +221,32 @@ body {
    
     background: white;
     height:3rem;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
   }
 
   @media only screen and (max-width: 1024px) {
+    main { 
+      display: flex;
+      flex-direction: row-reverse;
+      margin:0;
+      background: url("./image/img2.jpg") no-repeat black;
+      background-position: -1500% 55%;
+      background-size: 98%;
+  }
+
     #principal { 
+      position: relative;
+      right:0;
       overflow: auto;
       font-family: 'Arvo', serif;
       font-weight:100; 
       background: rgba(30,30,30,0.5);
       color: white;
-      padding: 3rem 4rem 4rem 4rem;
-      width: 60%;;
+      padding: 3rem 2rem 3rem 2rem;
+      width: 70%;;
       margin-top:3rem;
       margin-right: 2rem;
       font-size: 1.2rem;
@@ -290,11 +327,12 @@ body {
     text-align: center;
     padding: 1rem;
     text-decoration: none;
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
 
   #principal { 
-      
+    position: relative;
+    right:0;
     font-family: 'Arvo', serif;
     font-weight:100; 
     background: rgba(30,30,30,0.5);
