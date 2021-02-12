@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #303030;
+    font-family: 'Arvo', serif;
+    color: white;
+    
+  }
+
+  nav {
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 100;
+   
+  }
+
+  nav a {
+    float: right;
+    color: #ff8724;
+    text-align: center;
+    padding: 1.5rem;
+    text-decoration: none;
+    font-size: 1.3em;
+  }
+  
+  nav a:hover {
+    background-color: #000;
+    border-bottom: 2px solid white;
+    
+  
+  }
+  
+  nav a.active {
+    background-color: #000;
+    border-bottom: 2px solid white;
+    color: #ff8724;
+  }
+
+  .menu {
+    background: black;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top: 0.5rem;
+    left: 1rem;
+    
+  }
+  
+  .hamburguer {
+    position: relative;
+    display: block;
+    background: #ff8724;;
+    width: 30px;
+    height: 3px;
+    top: 29px;
+    left: 15px;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .hamburguer:before,
+  .hamburguer:after {
+    background: #ff8724;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .hamburguer:before {
+    
+    top: -10px;
+  }
+  
+  .hamburguer:after {
+    bottom: -10px;
+  }
+  
+  input {
+    display: none;
+  }
+  
+  input:checked ~ label .hamburguer {
+    transform: rotate(45deg);
+  }
+  
+  input:checked ~ label .hamburguer:before {
+    transform: rotate(90deg);
+    top: 0;
+  }
+  
+  input:checked ~ label .hamburguer:after {
+    transform: rotate(90deg);
+    bottom: 0;
+  }
+
+  
+  .dropdown-content {
+    position: fixed;
+    overflow: auto;
+    padding: 1rem;
+    top: 5rem;
+    margin-left:-1rem;
+    font-size: 1rem;
+    z-index: 900;
+    display: none;
+    
+  }
+
+  .dropdown-content::-webkit-scrollbar {
+    width:0.2em;
+    }
+     
+    .dropdown-content::-webkit-scrollbar-track {
+    background:#333;
+    }
+     
+    .dropdown-content::-webkit-scrollbar-thumb {
+    background: #fff;
+    }
+
+
+  .dropdown-content a {
+      color: #ff8724; 
+      float: none;
+      display: block;
+      text-align: left;
+      padding:1rem;
+  }
+
+  
+
+  .dropdown-content a:hover {
+    color: white; 
+    background:none;
+    border: none;
+}
+
+.dropdown-active {
+    display: block;
+    position: absolute;
+    width:30%;
+    height: 40rem;
+    background-color: rgba(30,30,30, 0.9);
+    overflow: auto;
+    padding: 1rem;
+    top: 5rem;
+    margin-left:-1rem;
+    font-size: 1rem;
+    z-index: 500;
+    
+}
+
+.dropdown-content h2 {
+    padding:1rem;
+    color: #ff8724;
+}
+  
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    transition: all 0.5s ease-in-out;
+    
+  }
+
+  main {
+      margin: 0 auto;
+      width: 80%;
+      position: relative;
+      top: 10em;
+      padding: 0 1em 4em 1em;
+  }
+
+  p {
+      margin: 1em 0;
+  }
+
+  footer {
+    display: block;
+    width: 100%;
+    position: fixed;
+    background: white;
+    height:3rem;
+    bottom:0;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem
+  
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .dropdown-active { 
+      width:50%;       
+  }
+  }
+
+  @media only screen and (max-width: 425px) {
+
+  nav a {
+    float: right;
+    color: #ff8724;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 0.7em;
+  }
+
+  .dropdown-active { 
+    width:80%; 
+  }
+
+  .menu {
+    background: black;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .hamburguer {
+    position: relative;
+    display: block;
+    background: #ff8724;;
+    width: 15px;
+    height: 1.5px;
+    top: 14px;
+    left: 8px;
+    transition: 0.5s ease-in-out;
+  }
+
+  .hamburguer:before {
+    
+    top: -5px;
+  }
+  
+  .hamburguer:after {
+    bottom: -5px;
+  }
+}
