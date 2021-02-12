@@ -268,9 +268,14 @@ body {
                            "caixa8 caixa9 caixa10";                                              
       grid-gap: 1rem;   
   }
+      
+  .caixa {
+    overflow-y: auto;
+   }
 
   .caixa1 {
     grid-area: caixa1;
+    overflow-y: auto;
   }
   .caixa2 {
     grid-area: caixa2;
@@ -366,9 +371,14 @@ body {
                          "caixa10";                                              
     grid-gap: 1rem;   
 }
+      
+.caixa {
+    overflow-y: auto;
+   }
 
 .caixa1 {
   grid-area: caixa1;
+  overflow-y: auto;
 }
 .caixa2 {
   grid-area: caixa2;
