@@ -45,6 +45,7 @@ body {
       display: flex;
       flex-direction: row-reverse;
       margin:0;
+      height: 57rem;
       background: url("img2.jpg") no-repeat black;
       background-position: -1000% 55%;
       background-size: 98%;
@@ -63,7 +64,7 @@ body {
     margin-top:3rem;
     margin-right: 2rem;
     font-size: 1.2rem;
-    height: 40rem; 
+    height: 90%; 
   }
   #principal::-webkit-scrollbar {
     width:0.3em;
