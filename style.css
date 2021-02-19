@@ -1,5 +1,4 @@
 * {
-    
     box-sizing: border-box;
 }
 body {
@@ -7,7 +6,6 @@ body {
     padding: 0;
     background: #101010;
     font-family: 'Arvo', serif;
-    
     
   }
 
@@ -42,11 +40,12 @@ body {
   }
 
   main { 
+      position:relative;
+      height: 100vh;
       display: flex;
       flex-direction: row-reverse;
       margin:0;
-      height: 57rem;
-      background: url("img2.jpg") no-repeat black;
+      background: url("./image/img2.jpg") no-repeat black;
       background-position: -1000% 55%;
       background-size: 98%;
   }
@@ -61,11 +60,12 @@ body {
     color: white;
     padding: 4rem 2rem 4rem 4rem;
     width: 35%;;
+    height: 90%;
     margin-top:3rem;
     margin-right: 2rem;
-    font-size: 1.2rem;
-    height: 90%; 
+    font-size: 1.2rem; 
   }
+
   #principal::-webkit-scrollbar {
     width:0.3em;
     }
@@ -137,15 +137,15 @@ body {
     color: red;
     text-align: center;
   }
-  .caixa1:hover::-webkit-scrollbar {
+  .caixa1::-webkit-scrollbar {
     width:0.2em;
     }
      
-  .caixa1:hover::-webkit-scrollbar-track {
+  .caixa1::-webkit-scrollbar-track {
     background:#333;
     }
      
-  .caixa1:hover::-webkit-scrollbar-thumb {
+  .caixa1::-webkit-scrollbar-thumb {
     background: #fff;
     }
 
@@ -236,6 +236,19 @@ body {
       background: url("./image/img2.jpg") no-repeat black;
       background-position: -1500% 55%;
       background-size: 98%;
+      height: 45rem;
+  }
+
+  #principal { 
+    height: 95%;
+   
+  }
+
+  .caixa {
+    overflow: auto;
+  }
+  .caixa1 {
+    overflow-y: auto;
   }
 
     #principal { 
@@ -268,14 +281,9 @@ body {
                            "caixa8 caixa9 caixa10";                                              
       grid-gap: 1rem;   
   }
-      
-  .caixa {
-    overflow-y: auto;
-   }
 
   .caixa1 {
     grid-area: caixa1;
-    overflow-y: auto;
   }
   .caixa2 {
     grid-area: caixa2;
@@ -371,10 +379,10 @@ body {
                          "caixa10";                                              
     grid-gap: 1rem;   
 }
-      
+
 .caixa {
-    overflow-y: auto;
-   }
+  overflow-y: auto;
+}
 
 .caixa1 {
   grid-area: caixa1;
